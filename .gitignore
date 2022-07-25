@@ -117,3 +117,4 @@ data/*
 !data/embedder.pt
 !data/chkpt_165000.pt
 !data/logs/test_run/*
+!data/LibriSpeech/normalize-resample.sh

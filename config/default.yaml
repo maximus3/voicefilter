@@ -15,8 +15,8 @@ model:
   fc2_dim: 601 # num_freq
 ---
 data:
-  train_dir: 'data/train'
-  test_dir: 'data/test'
+  train_dir: 'data/reverse/train'
+  test_dir: 'data/reverse/test'
   audio_len: 3.0
 ---
 form:
