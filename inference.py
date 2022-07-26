@@ -42,7 +42,7 @@ def main(args, hp):
         est_wav = audio.spec2wav(est_mag, phase)
 
         os.makedirs(args.out_dir, exist_ok=True)
-        out_path = os.path.join(args.out_dir, 'result.wav')
+        out_path = os.path.join(args.out_dir, args.out_file)
         sf.write(out_path, est_wav, 16000)
         # librosa.output.write_wav(out_path, est_wav, sr=16000)
 
@@ -61,6 +61,8 @@ if __name__ == '__main__':
                         help='path of reference wav file')
     parser.add_argument('-o', '--out_dir', type=str, required=True,
                         help='directory of output')
+    parser.add_argument('-of', '--out_file', type=str, default='result.wav',
+                        help='file of output')                 
 
     args = parser.parse_args()
 
